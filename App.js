@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import styled from 'styled-components/native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import Home from './screens/Home';
+import Tabs from './Navigation/Tabs';
+import { NavigationContainer } from '@react-navigation/native';
 
 const  Value = styled.Text `
     color : #333;
@@ -12,15 +12,16 @@ const  Value = styled.Text `
 export default function App() {
 
   return (
-      <SafeAreaView style={styles.container}>
-          <Home/>
-      </SafeAreaView>
+      <NavigationContainer>
+          <Tabs/>
+      </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex : 1,
-    backgroundColor : '#F4F4F4'
+    backgroundColor : '#F4F4F4',
+  
   },
 });
