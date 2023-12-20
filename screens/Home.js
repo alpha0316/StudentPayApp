@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor : '#F4F4F4',
     marginHorizontal : 24,
-    marginVertical : 52,
+    marginVertical : 64,
     gap : 16
   },
   col1 : {
