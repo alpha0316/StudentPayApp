@@ -1,16 +1,19 @@
 import React from 'react'
 import { StyleSheet, View , Image , Text , TouchableOpacity } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import Svg, { Path } from "react-native-svg"
 import { SvgXml } from 'react-native-svg';
 import Home from '../screens/Home'
-import Earn from '../screens/Earn'
+import Earn from '../screens/Earn';
 import Learn from '../screens/Learn'
 import Pay from '../screens/Pay'
+import Header from '../Components/Header';
 
 
 const Tab = createBottomTabNavigator()
+
 
 const screenOptions = {
     tabBarShowLabel : false,
@@ -62,6 +65,7 @@ const Tabs = ({ navigation }) => {
                           
                             />
                           </Svg>
+                          
                         </View>
                      
                          ),
@@ -136,7 +140,7 @@ const Tabs = ({ navigation }) => {
                           <Tab.Screen 
                           alignContent = 'center'
                           backgroundColor = 'red'
-                         name="Earn"
+                          name="EarnOld"
                           component={Earn}
                           options={{
                          tabBarIcon: ({ focused }) => (
