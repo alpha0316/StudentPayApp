@@ -10,7 +10,10 @@ import SecondaryButton from '../Components/SecondaryButton';
 
 const SubsPage = () => {
   return (  
-        <ScrollView>
+        <ScrollView 
+        showsHorizontalScrollIndicator = {false}
+
+        >
             <View style={styles.container}>
                 <View style = { styles.subsContainer}>
                     <Text style = {{fontSize : 16 , fontWeight : '700'}}>You’ve no active Subscription</Text>

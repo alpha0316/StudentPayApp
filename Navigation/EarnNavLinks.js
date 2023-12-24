@@ -9,6 +9,8 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { createStackNavigator } from '@react-navigation/stack';
 import Header from '../Components/Header'
 import SubsPage from '../EarnPages/SubsPage';
+import Referrals from '../EarnPages/Referrals';
+import Points from '../EarnPages/Points';
 
 
 const ProfileScreen = () => (
@@ -89,8 +91,8 @@ const ProfileScreen = () => (
               />
   
             <TopTabs.Screen 
-                       name="Pay"
-                       component={PostsScreen}
+                       name="Refferals"
+                       component={Referrals}
                        options={{
                         tabBarIcon: ({ focused }) => (
                        
@@ -109,17 +111,38 @@ const ProfileScreen = () => (
                            height : 45,
                            fontWeight : focused? 'bold' : '300',
                            width : 85,
-                         }}>Subscribe</Text>
+                         }}>Referral</Text>
                        </View>
                     
                         ),
                       }}
               />
-               <TopTabs.Screen 
-          
-                       name="Learn"
-                       component={SettingsScreen}
+            <TopTabs.Screen 
+                       name="Points"
+                       component={Points}
+                       options={{
+                        tabBarIcon: ({ focused }) => (
                        
+                         <View style ={{borderRadius:24, height : '200' , width : '100' }}>
+                       
+                       <Text  
+                         style={{
+                           alignItems : 'center',
+                           alignItems : 'center',
+                           justifyContent  : 'center',
+                           paddingHorizontal : 4,
+                           paddingVertical : 12,
+                           color: focused ? 'black' : '#6F6F6F',
+                           right :24,
+                           top : -10,
+                           height : 45,
+                           fontWeight : focused? 'bold' : '300',
+                           width : 85,
+                         }}>Points</Text>
+                       </View>
+                    
+                        ),
+                      }}
               />
                           <TopTabs.Screen 
                           
