@@ -5,6 +5,9 @@ import Tabs from './Navigation/Tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import Pay from './screens/Pay';
 import Home from './screens/Home';
+import Splash from './Onboarding/Splash';
+import SignUp from './Onboarding/SignUp';
+import AppNaigation from './Navigation/AppNavigation'
 
 const  Value = styled.Text `
     color : #333;
@@ -14,17 +17,16 @@ const  Value = styled.Text `
 const App = () => {
 
   return (
-      <NavigationContainer>
-        <Tabs/>
-      </NavigationContainer>
+    <View style={styles.container}>
+        <AppNaigation/>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex : 1,
-    backgroundColor : '#F4F4F4',
-  
+    backgroundColor : 'white',
+    flex : 1
   },
 });
 
